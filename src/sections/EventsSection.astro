@@ -1,0 +1,49 @@
+---
+interface Props{
+    imageClassName : string
+    sectionClassName ?: string
+}
+
+import EventsCard from "../components/EventsCard.astro";
+const {imageClassName, sectionClassName = "max-w-[74rem] h-[35rem] bg-[#085A34] flex flex-row px-10 py-20 gap-5 justify-center items-center"} = Astro.props
+---
+
+<div class= {sectionClassName}>
+        <div class="px-2 py-2 bg-[#FFF6E8]">
+        <div class={`${imageClassName} w-[35rem] h-[21rem]`}></div>
+    </div>
+    <EventsCard header = "EVENTS" description="The streets of Nepal have been defiled, polluted and disregarded to a point where even looking at it has become difficult. As we continued to develop, we failed to remember where we started, the streets we grew up in, the places we played, and most importantly, the lands of our prayers.We can change this. That is our goal. To play even a small part to preserve our ancestral history and our cultural heritage."/>
+</div>
+
+<style>
+    .event1{
+        background: url("../../../public/images/HeroBacground.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .event2{
+        background: url("../../../public/images/HeroBacground.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .event3{
+        background: url("../../../public/images/HeroBacground.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .event4{
+        background: url("../../../public/images/HeroBacground.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    
+
+</style>
