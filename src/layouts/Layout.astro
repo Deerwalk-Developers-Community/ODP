@@ -5,6 +5,7 @@ interface Props {
 
 const { title } = Astro.props;
 import FooterPage from '../_page/FooterPage.astro';
+import NavbarSection from '../sections/NavbarSection.astro';
 ---
 
 <!doctype html>
@@ -23,7 +24,8 @@ import FooterPage from '../_page/FooterPage.astro';
     />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="pt-24">
+    <NavbarSection />
     <slot />
     <FooterPage />
   </body>
