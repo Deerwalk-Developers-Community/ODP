@@ -1,6 +1,15 @@
+---
+interface Props {
+  width?: string;
+  height?: string;
+}
+
+const { width = "1516", height = "307" } = Astro.props;
+---
+
 <svg
-  width="1516"
-  height="307"
+  width={width}
+  height={height}
   viewBox="0 0 1516 307"
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
