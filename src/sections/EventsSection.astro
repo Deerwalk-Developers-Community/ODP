@@ -7,12 +7,12 @@ interface Props{
 }
 
 import EventsCard from "../components/EventsCard.astro";
-const {imageClassName, sectionClassName = "max-w-[74rem] h-[35rem] bg-[#085A34] flex flex-row px-10 py-20 gap-5 justify-center items-center rounded-lg", header, description} = Astro.props
+const {imageClassName, sectionClassName = "max-w-[74rem] h-fit bg-[#085A34] flex xl:flex-row flex-col lg:px-10 px-5 lg:py-20 py-10 gap-5 justify-center items-center rounded-lg", header, description} = Astro.props
 ---
 
 <div class= {sectionClassName}>
         <div class="px-2 py-2 bg-[#FFF6E8]">
-        <div class={`${imageClassName} w-[35rem] h-[21rem]`}></div>
+        <div class={`${imageClassName} lg:w-[35rem] md:w-[30rem] w-[19rem] h-[21rem]`}></div>
     </div>
     <EventsCard header = {header} description= {description}/>
 </div>

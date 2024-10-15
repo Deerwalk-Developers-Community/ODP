@@ -16,11 +16,11 @@ export default function NavBarSection() {
     }, [isNavbarCardVisible]);
 
     return (
-        <div className="bg-[#1C2D27] w-full h-[6rem] fixed top-0 z-10 flex flex-row justify-between px-10">
-            <div>
+        <div className="bg-[#1C2D27] w-full h-[6rem] fixed top-0 z-10 flex flex-row lg:justify-between justify-end px-10">
+            <div className="lg:block hidden">
                 <Logo width="75px" />
             </div>
-            <div className="flex gap-32 text-white font-sans justify-center items-center text-xl">
+            <div className="flex lg:gap-32 gap-4 text-white font-sans justify-center items-center text-lg lg:text-xl">
                 <div className="h-full w-[5rem] flex justify-center items-center">
                     Events
                 </div>
@@ -28,7 +28,7 @@ export default function NavBarSection() {
                     Gallery
                 </div>
                 <div
-                    className="h-full w-[5rem] flex justify-center items-center cursor-pointer bg-red-600"
+                    className="h-full w-[5rem] flex justify-center items-center cursor-pointer"
                     onClick={toggleNavbarCard}
                 >
                     <Hamburger />
