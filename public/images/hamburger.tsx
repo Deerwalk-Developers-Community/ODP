@@ -1,13 +1,11 @@
----
-interface Props {
-  width?: string;
-  height?: string;
-}
+import React, { type ReactElement } from "react";
 
-const { width = "21", height = "21" } = Astro.props;
----
-
-<svg
+export default function Hamburger({width = "21",height = "21"}:{
+  width ?: string,
+  height ?: string
+}):ReactElement{
+  return(
+  <svg
   width={width}
   height={height}
   viewBox="0 0 21 21"
@@ -21,3 +19,6 @@ const { width = "21", height = "21" } = Astro.props;
     stroke-linecap="round"
     stroke-linejoin="round"></path>
 </svg>
+
+  );
+}
