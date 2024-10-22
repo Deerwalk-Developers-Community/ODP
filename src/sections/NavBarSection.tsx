@@ -7,13 +7,8 @@ export default function NavBarSection() {
   const [isNavbarCardVisible, setNavbarCardVisible] = useState(false);
 
   const toggleNavbarCard = () => {
-    console.log("Toggle button clicked!");
     setNavbarCardVisible(!isNavbarCardVisible);
   };
-
-  useEffect(() => {
-    console.log("NavbarCard visibility changed:", isNavbarCardVisible);
-  }, [isNavbarCardVisible]);
 
   return (
     <div className="bg-[#1C2D27] w-full h-[6rem] fixed top-0 z-10 flex flex-row lg:justify-between justify-end px-10">
@@ -27,11 +22,8 @@ export default function NavBarSection() {
         <div className="h-full w-[5rem] flex justify-center items-center">
           Gallery
         </div>
-        <div
-          className="h-full  flex justify-center items-center cursor-pointer"
-          onClick={toggleNavbarCard}
-        >
-          <Hamburger />
+        <div className="h-full  flex justify-center items-center cursor-pointer">
+          <Hamburger onClick={toggleNavbarCard} />
         </div>
       </div>
       {isNavbarCardVisible && (
