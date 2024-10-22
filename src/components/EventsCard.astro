@@ -1,0 +1,16 @@
+---
+interface Props{
+    header : string,
+    description : string
+}
+const {header, description} = Astro.props
+---
+
+<div class="h-[27rem] w-full flex flex-col text-white font-raleway justify-center items-center text-center">
+    <p class="lg:text-6xl text-5xl font-extrabold mb-10" >
+        {header}
+    </p>
+    <p class="lg:text-2xl text-xl font-thin">
+        {description}
+    </p>
+</div>
