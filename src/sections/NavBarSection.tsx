@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Logo from "../../public/images/Logo";
 import Hamburger from "../../public/images/hamburger";
 import NavbarCard from "../components/NavbarCard";
@@ -22,15 +22,23 @@ export default function NavBarSection() {
         <div className="h-full w-[5rem] flex justify-center items-center">
           Gallery
         </div>
-        <div className="h-full  flex justify-center items-center cursor-pointer">
+        <div className="relative flex justify-center items-center cursor-pointer">
           <Hamburger onClick={toggleNavbarCard} />
+
+          {isNavbarCardVisible && (
+            <>
+              <div
+                className="fixed inset-0 bg-black opacity-25 z-9"
+                onClick={toggleNavbarCard}
+              />
+
+              <div className="absolute top-full right-0 w-max bg-[#1C2D27] shadow-lg rounded-lg mt-5 cursor-default">
+                <NavbarCard />
+              </div>
+            </>
+          )}
         </div>
       </div>
-      {isNavbarCardVisible && (
-        <div className="absolute top-[6rem] left-0 w-full">
-          <NavbarCard />
-        </div>
-      )}
     </div>
   );
 }
