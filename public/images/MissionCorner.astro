@@ -1,0 +1,39 @@
+---
+interface Props {
+  width?: string;
+  height?: string;
+}
+
+const { width = "74", height = "133" } = Astro.props;
+---
+
+<svg
+  width= {width}
+  height= {height}
+  viewBox="0 0 74 133"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <circle
+    cx="36.3907"
+    cy="36.3907"
+    r="26"
+    transform="rotate(53.2314 36.3907 36.3907)"
+    fill="#16372A"
+    fill-opacity="0.5"></circle>
+  <circle
+    cx="51.9097"
+    cy="82.2183"
+    r="15"
+    transform="rotate(53.2314 51.9097 82.2183)"
+    fill="#16372A"
+    fill-opacity="0.5"></circle>
+  <ellipse
+    cx="58.0494"
+    cy="116.329"
+    rx="11"
+    ry="11.5"
+    transform="rotate(53.2314 58.0494 116.329)"
+    fill="#16372A"
+    fill-opacity="0.5"></ellipse>
+</svg>
