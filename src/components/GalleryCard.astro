@@ -1,0 +1,22 @@
+---
+interface Props{
+    header : string,
+    description : string,
+    slogan ?: string
+}
+
+const {header, description, slogan} = Astro.props
+---
+
+<div class="w-full h-fit flex flex-col gap-5 font-raleway text-white text-center justify-center items-center">
+    <p class = "lg:text-6xl text-5xl  font-extrabold mb-5">
+        {header}
+    </p>
+    <p class="lg:text-2xl text-lg font-thin lg:w-[30rem] w-fit">
+        {description}
+    </p>
+    <p class="lg:text-2xl text-xl font-semibold">
+        {slogan}
+    </p>
+</div>
+
